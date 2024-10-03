@@ -1,7 +1,7 @@
 import realEstate from "./RealEstate.json";
 require("dotenv").config();
 
-export const REAL_ESTATE_ADDRESS = "0x61Cccc4CdB233a3a8eE63D5C4399FC9956f12A30";
+export const REAL_ESTATE_ADDRESS = "0x73641118e93Be1Ed8cE170E17E564Fa76b43a8fb";
 export const REAL_ESTATE_ABI = realEstate.abi;
 
 export const PINATA_API_KEY = "da212708ca61ceb1b91d";
@@ -86,6 +86,17 @@ const networks = {
     rpcUrls: ["https://sepolia.base.org"],
     blockExplorerUrls: ["https://bscscan.com"],
   },
+  arbitrum_sepolia: {
+    chainId: `0x${Number(421614).toString(16)}`,
+    chainName: "Arbitrum Sepolia",
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    rpcUrls: ["https://sepolia-rollup.arbitrum.io/rpc"],
+    blockExplorerUrls: ["https://sepolia-explorer.arbitrum.io/"],
+  },
   localhost: {
     chainId: `0x${Number(31337).toString(16)}`,
     chainName: "localhost",
@@ -108,6 +119,17 @@ const networks = {
     rpcUrls: ["https://rpc.open-campus-codex.gelato.digital"],
     blockExplorerUrls: ["https://opencampus-codex.blockscout.com"],
   },
+  neox_testnet: {
+    chainId: `0x${Number(12227332).toString(16)}`,
+    chainName: "NeoX Testnet T4",
+    nativeCurrency: {
+      name: "NeoX",
+      symbol: "GAS",
+      decimals: 18,
+    },
+    rpcUrls: ["https://12227332.rpc.thirdweb.com"],
+    blockExplorerUrls: ["https://xexplorer.neo.org/"],
+  },
 };
 
 const changeNetwork = async ({ networkName }) => {
@@ -126,10 +148,11 @@ const changeNetwork = async ({ networkName }) => {
   }
 };
 
-export const ACTIVE_NETWORK = "bsc_testnet";
+// Set Arbitrum Sepolia as the default network
+export const ACTIVE_NETWORK = "arbitrum_sepolia";
 
 export const handleNetworkSwitch = async () => {
-  const networkName = "bsc_testnet";
+  const networkName = "arbitrum_sepolia";
   const network = await changeNetwork({ networkName });
   return networkName;
 };

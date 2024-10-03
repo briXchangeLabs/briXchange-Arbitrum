@@ -22,7 +22,7 @@ const Footer = () => {
                   variant="outlined"
                   color="primary"
                   startIcon={<GitHubIcon />}
-                  href="https://github.com/ahkharsha/briXchange"
+                  href="https://github.com/dishadaniellol/Brikspace"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
@@ -34,15 +34,15 @@ const Footer = () => {
                     },
                   }}
                 >
-                  briXchange - GitHub
+                  Brikspace - GitHub
                 </Button>
                 <p class="rn-footer-describe">
                   Created with the collaboration of over 60 of the world's best
-                  briXchange Artists.
+                  Brikspace Artists.
                 </p>
               </div>
               <div class="widget-bottom mt--40 pt--40">
-                <h6 class="title">Get The Latest briXchange Updates</h6>
+                <h6 class="title">Get The Latest Brikspace Updates</h6>
                 <div class="input-group">
                   <input
                     type="text"
@@ -68,7 +68,7 @@ const Footer = () => {
 
           <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt_mobile--40">
             <div class="footer-widget widget-quicklink">
-              <h6 class="widget-title">briXchange</h6>
+              <h6 class="widget-title">Brikspace</h6>
               <ul class="footer-list-one">
                 <li class="single-list">
                   <a href="#">Protocol Explore</a>
